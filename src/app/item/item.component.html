@@ -10,7 +10,7 @@
         <input class="sm-text-input" #editedItem placeholder="Escreva o novo nome da tarefa aqui"
             [value]="tarefa.descricao" (keydown.enter)="tarefa.descricao=editedItem.value; emEdicao = false; modificaTarefa.emit()">
         <div class="btn-wrapper">
-            <button class="btn" (click)="emEdicao = false ">Cancelar</button>
+            <button class="btn btn-cancel" (click)="emEdicao = false ">Cancelar</button>
             <button class="btn btn-save" (click)="tarefa.descricao=editedItem.value; emEdicao
    = false; modificaTarefa.emit()">Salvar</button>
         </div>

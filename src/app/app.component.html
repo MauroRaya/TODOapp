@@ -1,9 +1,10 @@
 <div class="main">
-  <h1>Mauro Raya - 232009</h1>
-  <input class="lg-text-input" (keydown.enter)="CREATE_tarefa(campoNovoItem.value)"
-    (keydown.enter)="campoNovoItem.value = ''" #campoNovoItem />
+  <h1>Gerenciador de tarefas</h1>
+  Mauro Raya - 232009<br><br>
+  <input class="lg-text-input" (keydown.enter)="CREATE_tarefa(campoNovoItem.value)" (keydown.enter)="campoNovoItem.value = ''" #campoNovoItem />
   <button class="btn-primary" (click)="CREATE_tarefa(campoNovoItem.value)" (click)="campoNovoItem.value = ''">
-    Adicionar Tarefa</button>
+    Adicionar Tarefa
+  </button>
   <ul>
     <li *ngFor="let tarefaDoLoop of arrayDeTarefas">
       <app-item [tarefa]="tarefaDoLoop" (removerElemento)="DELETE_tarefa($event)" (modificaTarefa)="UPDATE_tarefa(tarefaDoLoop)"></app-item>
